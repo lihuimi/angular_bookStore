@@ -1,6 +1,11 @@
 # angular_base
 ## 利用angular搭建一个简单的项目
 
+### angular常用网站
+
+http://www.ngnice.com/  
+https://angular-ui.github.io/  
+
 ### angular基础知识：  
  1.mvc模式  
  2.一切从模块开始  
