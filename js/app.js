@@ -1,7 +1,7 @@
 /**
  * Created by Administrator on 2017/11/10.
  */
-angular.module('bookStoreApp', ['ui.router', 'ngGrid', 'bookListModule', 'bookDetailModule', 'addBookModule'])
+angular.module('bookStoreApp', ['ui.router', 'ngGrid', 'loginModule', 'bookListModule', 'bookDetailModule', 'addBookModule'])
   .config(['$urlRouterProvider', '$stateProvider', function ($urlRouterProvider, $stateProvider) {
     $urlRouterProvider.otherwise('/index')
     $stateProvider

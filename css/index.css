@@ -3,3 +3,12 @@
   /*width: 400px;*/
   height: 300px;
 }
+.error{
+  color: #a10;
+}
+.check-result{
+  position: relative;
+  top: -26px;
+  left: 900px;
+  color: green;
+}

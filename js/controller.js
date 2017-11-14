@@ -1,6 +1,14 @@
 /**
  * Created by Administrator on 2017/11/10.
  */
+var loginModule = angular.module('loginModule', []);
+loginModule.controller('loginCtrl', ['$scope', '$state', function ($scope, $state) {
+  $scope.userInfo = {};
+  $scope.submitForm = function () {
+    $state.go('booklist', {bookType:0});
+  }
+}])
+
 var bookListModule = angular.module('bookListModule', []);
 bookListModule.controller('bookListCtrl', ['$rootScope', '$scope', function ($rootScope, $scope) {
 
