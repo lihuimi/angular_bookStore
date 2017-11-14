@@ -15,7 +15,7 @@ https://angular-ui.github.io/
 ### 用到的知识：  
  1.bootstrap  
  2.ui-router  
-    $urlRouterProvider、$stateProvider配置路由，常用参数
+    $urlRouterProvider、$stateProvider配置路由，常用参数：
     ```  
       $stateProvider.state('name', {  
         url: '路由',  
@@ -33,5 +33,11 @@ https://angular-ui.github.io/
     ```  
     
  3.ng-grid  
-  表格类控件  
+	表格类控件  
  
+ 4.angular表单验证  
+	
+- formName.inputName.$valid  
+- formName.inputName.$invalid  
+- formName.inputName.$dirty  
+- formName.inputName.$error.required
