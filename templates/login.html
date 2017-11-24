@@ -7,23 +7,25 @@
     </div>
     <div class="row">
       <div class="col-md-12">
-        <form name="loginForm" class="form-horizontal" role="form" ng-submit="submitForm()">
-          <div class="form-group">
+        <form novalidate name="loginForm" class="form-horizontal" role="form" ng-submit="submitForm()">
+
+          <div class="form-group" ng-class="{'has-error': loginForm.username.$invalid && loginForm.username.$dirty}">
             <label class="col-md-2 control-label">用户名:</label>
             <div class="col-md-10">
+              <div>{{ loginForm.$invalid }}</div>
               <input ng-model="userInfo.username" name="username" type="email" class="form-control" placeholder="推荐使用126邮箱" required>
               <i class="fa fa-check check-result" ng-show="loginForm.username.$valid"></i>
-              <p class="error" ng-show="loginForm.username.$dirty && loginForm.username.$error.required">请输入用户名</p>
-              <p class="error" ng-show="loginForm.username.$dirty && !loginForm.username.$error.required && loginForm.username.$invalid">用户名格式错误</p>
+              <p class="text-danger" ng-show="loginForm.username.$dirty && loginForm.username.$error.required">请输入用户名</p>
+              <p class="text-danger" ng-show="loginForm.username.$dirty && !loginForm.username.$error.required && loginForm.username.$invalid">用户名格式错误</p>
             </div>
           </div>
-          <div class="form-group">
+          <div class="form-group" ng-class="{'has-error': loginForm.password.$invalid && loginForm.password.$dirty}">
             <label class="col-md-2 control-label">密码：</label>
             <div class="col-md-10">
               <input ng-model="userInfo.password" name="password" type="password" class="form-control" placeholder="只能是数字、字母、下划线" required ng-minlength="6">
               <i class="fa fa-check check-result" ng-show="loginForm.password.$valid"></i>
-              <p class="error" ng-show="loginForm.password.$dirty && loginForm.password.$error.required">请输入密码</p>
-              <p class="error" ng-show="loginForm.password.$dirty && !loginForm.password.$error.required && loginForm.password.$invalid">密码格式错误</p>
+              <p class="text-danger" ng-show="loginForm.password.$dirty && loginForm.password.$error.required">请输入密码</p>
+              <p class="text-danger" ng-show="loginForm.password.$dirty && !loginForm.password.$error.required && loginForm.password.$invalid">密码格式错误</p>
             </div>
           </div>
           <div class="form-group">
